@@ -21,8 +21,4 @@ A beautiful animated web project featuring a glowing rotating moon, twinkling st
 
 A calming night-sky scene with a glowing moon at the center and a floating smoke heart animation.
 
-## 🛠️ How to Run
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/lunar-smoke-heart.git
