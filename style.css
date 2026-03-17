@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #0a0f2c, #000);
+}
+
+/* Stars + smoke canvas */
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Moon */
+.moon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+    background: url("FullMoon2010.jpg") repeat-x;
+    background-size: cover;
+
+    animation: rotateMoon 50s linear infinite;
+
+    box-shadow:
+        0 0 80px rgba(255,255,200,0.4),
+        inset 60px 0 40px rgba(0,0,0,0.9),
+        inset -100px 0 60px rgba(255,255,220,0.2);
+}
+
+.moon::after{
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,200,0.15), transparent 70%);
+    filter: blur(20px);
+}
+
+@keyframes rotateMoon{
+    from { background-position: -300px center; }
+    to { background-position: 300px center; }
+}
